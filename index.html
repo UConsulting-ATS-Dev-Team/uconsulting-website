@@ -39,7 +39,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
 <style id="uconsulting-stats-bar-css">
 .elementor-6 .elementor-element.elementor-element-2f5e25f {
-	height: clamp(500px, 42vw, 700px) !important;
+	height: clamp(535px, 46vw, 740px) !important;
 	min-height: 0 !important;
 }
 .elementor-6 .elementor-element.elementor-element-2f5e25f > .elementor-container {
@@ -52,12 +52,14 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 	min-height: 116px;
 	box-sizing: border-box;
 	background: #ffffff;
-	border-top: 1px solid rgba(4, 39, 66, 0.08);
-	border-bottom: 1px solid rgba(4, 39, 66, 0.1);
-	box-shadow: 0 10px 30px rgba(4, 39, 66, 0.07);
+	border: 0;
+	box-shadow: none;
 	padding: 30px max(5%, 24px);
 	position: relative;
 	z-index: 2;
+}
+.elementor-6 .elementor-element.elementor-element-3939c3c {
+	background: #ffffff;
 }
 .uconsulting-stat {
 	display: flex;
@@ -98,13 +100,13 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 }
 @media (max-width: 767px) {
 	.elementor-6 .elementor-element.elementor-element-2f5e25f {
-		height: calc(100svh - 98px) !important;
+		height: calc(100svh - 88px) !important;
 		min-height: 0 !important;
 	}
 	.uconsulting-stats-bar {
 		grid-template-columns: repeat(3, minmax(0, 1fr));
-		min-height: 98px;
-		padding: 12px 6px;
+		min-height: 88px;
+		padding: 8px 6px;
 	}
 	.uconsulting-stat {
 		padding: 0 7px;
