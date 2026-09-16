@@ -164,7 +164,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     }
 
     .elementor-6 .elementor-element.elementor-element-3d9902e .elementor-icon {
-        width: clamp(155px, 40vw, 205px);
+        width: clamp(150px, 26vw, 205px);
     }
 }
 .uconsulting-stats-bar {
@@ -222,13 +222,55 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 }
 @media (max-width: 767px) {
 	.elementor-6 .elementor-element.elementor-element-2f5e25f {
-		height: calc(100svh - 116px) !important;
-		min-height: 0 !important;
+		height: auto !important;
+		min-height: clamp(560px, 100svh, 720px) !important;
+		background-position: 58% center !important;
+	}
+	.elementor-6 .elementor-element.elementor-element-2f5e25f > .elementor-container,
+	.elementor-6 .elementor-element.elementor-element-2f5e25f > .elementor-container > .elementor-column,
+	.elementor-6 .elementor-element.elementor-element-2f5e25f > .elementor-container > .elementor-column > .elementor-widget-wrap {
+		min-height: inherit;
+	}
+	.elementor-6 .elementor-element.elementor-element-2b3d0e0 > .elementor-element-populated {
+		padding: 12px 18px 34px !important;
+	}
+	.elementor-6 .elementor-element.elementor-element-2e9a7e5 > .elementor-container {
+		min-height: 64px !important;
+	}
+	.elementor-6 .elementor-element.elementor-element-fbd7c38 {
+		width: min(42vw, 170px) !important;
+		max-width: min(42vw, 170px) !important;
+	}
+	.elementor-6 .elementor-element.elementor-element-3d9902e .elementor-icon {
+		width: clamp(132px, 38vw, 172px);
+	}
+	.elementor-6 .elementor-element.elementor-element-ed51b30 .elementor-heading-title {
+		font-size: clamp(2rem, 9vw, 3rem) !important;
+		line-height: 1.08 !important;
+		letter-spacing: -0.035em;
+		text-wrap: balance;
+	}
+	.elementor-6 .elementor-element.elementor-element-344033f {
+		width: min(100%, 560px);
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.elementor-6 .elementor-element.elementor-element-344033f .elementor-heading-title {
+		font-size: clamp(0.95rem, 4vw, 1.12rem) !important;
+		line-height: 1.45 !important;
+		padding: 0 6px;
+		text-wrap: balance;
+	}
+	.elementor-6 .elementor-element.elementor-element-9b98450 .elementor-button {
+		min-height: 34px;
+		padding: 8px 13px !important;
+		font-size: 0.9rem !important;
+		white-space: nowrap;
 	}
 	.uconsulting-stats-bar {
 		grid-template-columns: repeat(3, minmax(0, 1fr));
-		min-height: 116px;
-		padding: 10px 4px;
+		min-height: 104px;
+		padding: 12px 4px;
 	}
 	.uconsulting-stat {
 		padding: 0 5px;
@@ -242,13 +284,29 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 		height: 84%;
 	}
 	.uconsulting-stat-value {
-		font-size: 2.35rem;
+		font-size: clamp(1.75rem, 8vw, 2.35rem);
 	}
 	.uconsulting-stat-label {
-		font-size: 0.78rem;
+		font-size: clamp(0.58rem, 2.6vw, 0.78rem);
 		line-height: 1.2;
 		letter-spacing: 0.025em;
 		margin-top: 7px;
+	}
+}
+
+@media (max-width: 390px) {
+	.elementor-6 .elementor-element.elementor-element-2b3d0e0 > .elementor-element-populated {
+		padding-left: 12px !important;
+		padding-right: 12px !important;
+	}
+	.elementor-6 .elementor-element.elementor-element-3d9902e .elementor-icon {
+		width: clamp(122px, 36vw, 145px);
+	}
+	.elementor-6 .elementor-element.elementor-element-ed51b30 .elementor-heading-title {
+		font-size: clamp(1.8rem, 8.5vw, 2.35rem) !important;
+	}
+	.uconsulting-stat {
+		padding: 0 3px;
 	}
 }
 </style>
