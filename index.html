@@ -222,8 +222,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 }
 @media (max-width: 767px) {
 	.elementor-6 .elementor-element.elementor-element-2f5e25f {
-		height: auto !important;
-		min-height: clamp(560px, 100svh, 720px) !important;
+		height: clamp(480px, calc(100svh - 104px), 620px) !important;
+		min-height: clamp(480px, calc(100svh - 104px), 620px) !important;
 		background-position: 58% center !important;
 	}
 	.elementor-6 .elementor-element.elementor-element-2f5e25f > .elementor-container,
@@ -235,7 +235,19 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 		padding: 12px 18px 34px !important;
 	}
 	.elementor-6 .elementor-element.elementor-element-2e9a7e5 > .elementor-container {
-		min-height: 64px !important;
+		min-height: 108px !important;
+		flex-wrap: wrap;
+	}
+	.elementor-6 .elementor-element.elementor-element-c92f951 {
+		flex: 0 0 100% !important;
+		order: 3;
+		width: 100% !important;
+	}
+	.elementor-6 .elementor-element.elementor-element-c92f951 > .elementor-element-populated,
+	.elementor-6 .elementor-element.elementor-element-9b98450,
+	.elementor-6 .elementor-element.elementor-element-9b98450 .elementor-widget-container,
+	.elementor-6 .elementor-element.elementor-element-9b98450 .elementor-button-wrapper {
+		width: 100% !important;
 	}
 	.elementor-6 .elementor-element.elementor-element-fbd7c38 {
 		width: min(42vw, 170px) !important;
@@ -256,16 +268,23 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 		margin-right: auto;
 	}
 	.elementor-6 .elementor-element.elementor-element-344033f .elementor-heading-title {
-		font-size: clamp(0.95rem, 4vw, 1.12rem) !important;
-		line-height: 1.45 !important;
+		font-size: clamp(0.82rem, 3.2vw, 0.98rem) !important;
+		line-height: 1.4 !important;
 		padding: 0 6px;
 		text-wrap: balance;
 	}
 	.elementor-6 .elementor-element.elementor-element-9b98450 .elementor-button {
-		min-height: 34px;
-		padding: 8px 13px !important;
+		width: 100%;
+		height: 42px;
+		min-height: 0;
+		justify-content: center;
+		padding: 0 16px !important;
 		font-size: 0.9rem !important;
 		white-space: nowrap;
+	}
+	.elementor-6 .elementor-element.elementor-element-9b98450 .elementor-button-content-wrapper {
+		align-items: center;
+		line-height: 1;
 	}
 	.uconsulting-stats-bar {
 		grid-template-columns: repeat(3, minmax(0, 1fr));
