@@ -233,8 +233,20 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 		min-height: inherit;
 	}
 	.elementor-6 .elementor-element.elementor-element-2b3d0e0 > .elementor-element-populated {
+		display: grid !important;
+		grid-template-columns: minmax(0, 1fr);
+		grid-auto-rows: max-content;
+		row-gap: 8px;
 		align-content: flex-start !important;
-		padding: 8px 18px 18px !important;
+		align-items: start !important;
+		padding: 8px 18px 12px !important;
+	}
+	.elementor-6 .elementor-element.elementor-element-2e9a7e5,
+	.elementor-6 .elementor-element.elementor-element-3d9902e,
+	.elementor-6 .elementor-element.elementor-element-ed51b30,
+	.elementor-6 .elementor-element.elementor-element-344033f {
+		margin-top: 0 !important;
+		margin-bottom: 0 !important;
 	}
 	.elementor-6 .elementor-element.elementor-element-2e9a7e5 > .elementor-container {
 		min-height: 86px !important;
@@ -264,10 +276,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 		width: clamp(98px, 29vw, 118px);
 	}
 	.elementor-6 .elementor-element.elementor-element-3d9902e {
-		margin: 12px 0 6px !important;
+		margin: 4px 0 0 !important;
 	}
 	.elementor-6 .elementor-element.elementor-element-ed51b30 {
-		margin-bottom: 8px !important;
+		margin-bottom: 2px !important;
 	}
 	.elementor-6 .elementor-element.elementor-element-ed51b30 .elementor-heading-title {
 		font-size: clamp(1.75rem, 8vw, 2.25rem) !important;
@@ -276,14 +288,14 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 		text-wrap: balance;
 	}
 	.elementor-6 .elementor-element.elementor-element-344033f {
-		width: min(100%, 330px);
+		width: min(100%, 370px);
 		margin-left: auto;
 		margin-right: auto;
 		margin-bottom: 0 !important;
 	}
 	.elementor-6 .elementor-element.elementor-element-344033f .elementor-heading-title {
-		font-size: clamp(0.72rem, 3vw, 0.84rem) !important;
-		line-height: 1.35 !important;
+		font-size: clamp(0.68rem, 2.8vw, 0.78rem) !important;
+		line-height: 1.3 !important;
 		padding: 0 6px;
 		text-wrap: balance;
 	}
