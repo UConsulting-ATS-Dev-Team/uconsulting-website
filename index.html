@@ -38,6 +38,26 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </style>
 
 <style id="uconsulting-stats-bar-css">
+.homepage-skyline-flow {
+	position: relative;
+	isolation: isolate;
+	background-color: #ffffff;
+	background-image: url("/wp-content/uploads/2020/03/DTLA5.jpg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+@media (min-width: 1025px) {
+	.homepage-skyline-flow {
+		background-attachment: fixed;
+	}
+}
+.homepage-skyline-flow .elementor-element.elementor-element-2f5e25f:not(.elementor-motion-effects-element-type-background),
+.homepage-skyline-flow .elementor-element.elementor-element-2f5e25f > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+	background-color: transparent !important;
+	background-image: none !important;
+	background-attachment: scroll !important;
+}
 .elementor-6 .elementor-element.elementor-element-2f5e25f {
 	height: clamp(535px, 46vw, 740px) !important;
 	min-height: 0 !important;
@@ -173,15 +193,25 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 	width: 100%;
 	min-height: 124px;
 	box-sizing: border-box;
-	background: #ffffff;
+	background: transparent;
 	border: 0;
 	box-shadow: none;
 	padding: 30px max(5%, 24px);
 	position: relative;
 	z-index: 2;
 }
-.elementor-6 .elementor-element.elementor-element-3939c3c {
-	background: #ffffff;
+.uc-family-landscape {
+	position: relative;
+	isolation: isolate;
+	overflow: hidden;
+	background: transparent;
+}
+.uc-family-landscape::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+	background: rgba(255, 255, 255, 0.9);
 }
 .uconsulting-stat {
 	display: flex;
@@ -219,6 +249,94 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 	letter-spacing: 0.08em;
 	margin-top: 9px;
 	text-transform: uppercase;
+}
+.uc-family-section {
+	position: relative;
+	z-index: 1;
+	isolation: isolate;
+	overflow: hidden;
+	box-sizing: border-box;
+	background: transparent;
+	padding: clamp(34px, 4vw, 58px) max(5%, 24px) clamp(42px, 5vw, 70px);
+}
+.uc-family-inner {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(360px, 0.95fr);
+	align-items: center;
+	gap: clamp(42px, 6vw, 88px);
+	width: min(1180px, 100%);
+	margin: 0 auto;
+}
+.uc-family-copy {
+	color: #042742;
+	text-align: left;
+}
+.uc-family-copy h2 {
+	margin: 0 0 28px;
+	color: #042742;
+	font-family: "Montserrat", sans-serif;
+	font-size: clamp(2.5rem, 4.4vw, 4.7rem);
+	font-weight: 700;
+	letter-spacing: -0.035em;
+	line-height: 1.05;
+}
+.uc-family-accent {
+	color: #0c74c1;
+}
+.uc-family-copy p {
+	margin: 0 0 22px;
+	color: #042742;
+	font-family: "Montserrat", sans-serif;
+	font-size: clamp(1.31rem, 2.05vw, 1.6rem);
+	font-weight: 400;
+	line-height: 1.55;
+}
+.uc-family-copy p:last-child {
+	margin-bottom: 0;
+}
+.uc-family-visual {
+	justify-self: end;
+	width: min(100%, 460px);
+}
+.uc-family-visual img {
+	display: block;
+	width: 100%;
+	height: auto;
+	filter: drop-shadow(0 20px 28px rgba(4, 39, 66, 0.12));
+}
+.uc-family-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 210px;
+	margin-top: 16px;
+	padding: 17px 36px;
+	border: 2px solid #0c74c1;
+	border-radius: 4px;
+	background: #0c74c1;
+	color: #ffffff;
+	font-family: "Montserrat", sans-serif;
+	font-size: 1.35rem;
+	font-weight: 700;
+	line-height: 1;
+	text-decoration: none;
+	text-transform: capitalize;
+	transition: background-color 0.2s ease, color 0.2s ease;
+}
+.uc-family-button:hover,
+.uc-family-button:focus {
+	background: #ffffff;
+	color: #0c74c1;
+}
+@media (max-width: 1024px) and (min-width: 768px) {
+	.uc-family-inner {
+		grid-template-columns: minmax(0, 1fr) minmax(310px, 0.9fr);
+		gap: 36px;
+	}
+	.uc-family-copy p {
+		font-size: 1.24rem;
+		line-height: 1.58;
+	}
 }
 @media (max-width: 767px) {
 	.elementor-6 .elementor-element.elementor-element-2f5e25f {
@@ -342,6 +460,30 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 		line-height: 1.2;
 		letter-spacing: 0.025em;
 		margin-top: 7px;
+	}
+	.uc-family-section {
+		padding: 36px 20px 48px;
+	}
+	.uc-family-inner {
+		grid-template-columns: minmax(0, 1fr);
+		gap: 32px;
+	}
+	.uc-family-copy h2 {
+		margin-bottom: 18px;
+		font-size: clamp(2rem, 9vw, 2.8rem);
+	}
+	.uc-family-copy p {
+		font-size: 1.08rem;
+		line-height: 1.65;
+	}
+	.uc-family-button {
+		min-width: 160px;
+		padding: 13px 24px;
+		font-size: 1.1rem;
+	}
+	.uc-family-visual {
+		justify-self: center;
+		width: min(100%, 520px);
 	}
 }
 
@@ -580,6 +722,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </head>
 <body data-rsssl=1 class="home wp-singular page-template page-template-elementor_canvas page page-id-6 wp-custom-logo wp-embed-responsive wp-theme-oceanwp ehf-template-oceanwp ehf-stylesheet-oceanwp oceanwp-theme dropdown-mobile no-header-border default-breakpoint content-full-width content-max-width elementor-default elementor-template-canvas elementor-kit-22 elementor-page elementor-page-6">
 			<div data-elementor-type="wp-page" data-elementor-id="6" class="elementor elementor-6">
+			<div class="homepage-skyline-flow">
 						<section class="elementor-section elementor-top-section elementor-element elementor-element-2f5e25f elementor-section-stretched elementor-section-full_width elementor-section-content-top elementor-section-items-top elementor-section-height-default" data-id="2f5e25f" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
 							<div class="elementor-background-overlay"></div>
 							<div class="elementor-container elementor-column-gap-default">
@@ -707,6 +850,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 		</div>
 					</div>
 		</section>
+				<div class="uc-family-landscape">
 				<div class="uconsulting-stats-bar" aria-label="UConsulting impact statistics">
 						<div class="uconsulting-stat">
 							<span class="uconsulting-stat-value">150+</span>
@@ -721,22 +865,21 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 							<span class="uconsulting-stat-label">MBB &amp; F500 Placements Annually</span>
 						</div>
 				</div>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-3939c3c elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="3939c3c" data-element_type="section">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-f776271" data-id="f776271" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-7d2f3f6 elementor-widget elementor-widget-heading" data-id="7d2f3f6" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-					<h2 class="elementor-heading-title elementor-size-default">Our Mission</h2>				</div>
-				</div>
-				<div class="elementor-element elementor-element-579c718 elementor-widget elementor-widget-text-editor" data-id="579c718" data-element_type="widget" data-widget_type="text-editor.default">
-				<div class="elementor-widget-container">
-									UConsulting is the premier undergraduate student consulting organization at UCLA. Founded with the belief that the consulting industry should be accessible to all backgrounds, UConsulting is dedicated to providing our members the resources and opportunities to find professional success in consulting.								</div>
-				</div>
+				<section class="uc-family-section" aria-labelledby="uc-family-heading">
+					<div class="uc-family-inner">
+						<div class="uc-family-copy">
+							<h2 id="uc-family-heading">The <span class="uc-family-accent">U</span>C Family</h2>
+							<p>Founded in 2016, UConsulting brings together ambitious students from across UCLA who are driven to learn, grow, and support one another. We pride ourselves on being one of UCLA’s most close-knit professional communities, where members form friendships that last well beyond college and help each other thrive both personally and professionally.</p>
+							<p>From family dinners and friendsgiving to our bi-annual retreats and summer meetups around the world, our community extends far beyond meetings and project work. These shared experiences create a culture built on mentorship, friendship, and genuine connection, making UConsulting much more than just a professional organization.</p>
+							<a class="uc-family-button" href="/team/">Our Members</a>
+						</div>
+						<div class="uc-family-visual">
+							<img src="/wp-content/uploads/2026/09/uc-family-collage.png" alt="UConsulting members spending time together at social events" loading="lazy" decoding="async">
+						</div>
 					</div>
-		</div>
-					</div>
-		</section>
+				</section>
+				</div>
+				</div>
 				<section class="elementor-section elementor-top-section elementor-element elementor-element-996b48c elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="996b48c" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
 							<div class="elementor-background-overlay"></div>
 							<div class="elementor-container elementor-column-gap-default">
