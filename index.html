@@ -257,7 +257,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 	overflow: hidden;
 	box-sizing: border-box;
 	background: transparent;
-	padding: clamp(34px, 4vw, 58px) max(5%, 24px) clamp(42px, 5vw, 70px);
+	padding: clamp(34px, 4vw, 58px) max(5%, 24px) clamp(34px, 4vw, 56px);
 }
 .uc-family-inner {
 	display: grid;
@@ -270,8 +270,14 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 .uc-family-copy {
 	color: #042742;
 	text-align: left;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	align-self: center;
 }
-.uc-family-copy h2 {
+.uc-family-copy h2,
+.uc-work-copy h2 {
 	margin: 0 0 28px;
 	color: #042742;
 	font-family: "Montserrat", sans-serif;
@@ -283,7 +289,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 .uc-family-accent {
 	color: #0c74c1;
 }
-.uc-family-copy p {
+.uc-family-copy p,
+.uc-work-copy p {
 	margin: 0 0 22px;
 	color: #042742;
 	font-family: "Montserrat", sans-serif;
@@ -291,7 +298,11 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 	font-weight: 400;
 	line-height: 1.55;
 }
-.uc-family-copy p:last-child {
+.uc-family-copy p {
+	font-size: clamp(calc(1.31rem + 1.5px), calc(2.05vw + 1.5px), calc(1.6rem + 1.5px));
+}
+.uc-family-copy p:last-child,
+.uc-work-copy p:last-child {
 	margin-bottom: 0;
 }
 .uc-family-visual {
@@ -328,15 +339,180 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 	background: #ffffff;
 	color: #0c74c1;
 }
+.uc-work-section {
+	position: relative;
+	z-index: 1;
+	isolation: isolate;
+	box-sizing: border-box;
+	background: transparent;
+	padding: clamp(37px, 4.8vw, 66px) max(5%, 24px) clamp(58px, 7vw, 96px);
+}
+.uc-work-inner {
+	width: min(1180px, 100%);
+	margin: 0 auto;
+}
+.uc-work-copy {
+	color: #042742;
+	text-align: center;
+	max-width: 950px;
+	margin: 0 auto 38px;
+}
+.uc-work-copy h2 {
+	margin-bottom: 20px;
+}
+.uc-work-copy p {
+	margin: 0;
+}
+.uc-case-studies {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 24px;
+	align-items: stretch;
+}
+.uc-case-study {
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	background: #ffffff;
+	border: 1px solid rgba(4, 39, 66, 0.12);
+	border-radius: 12px;
+	box-shadow: 0 12px 28px rgba(4, 39, 66, 0.09);
+	text-align: left;
+}
+.uc-case-study-media {
+	position: relative;
+	height: 168px;
+	overflow: hidden;
+}
+.uc-case-study-image {
+	display: block;
+	width: 100%;
+	height: 100% !important;
+	object-fit: cover !important;
+	transition: transform 0.35s ease;
+}
+.uc-case-study--adidas .uc-case-study-image { object-position: 64% 54%; }
+.uc-case-study--linkedin .uc-case-study-image { object-position: 58% 48%; }
+.uc-case-study--snapchat .uc-case-study-image { object-position: 50% 61%; }
+.uc-case-study:hover .uc-case-study-image { transform: scale(1.025); }
+.uc-case-study-label {
+	position: absolute;
+	left: 14px;
+	bottom: 12px;
+	padding: 5px 8px;
+	border-radius: 3px;
+	background: rgba(4, 39, 66, 0.72);
+	color: #ffffff;
+	font-family: "Montserrat", sans-serif;
+	font-size: 0.68rem;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	line-height: 1;
+}
+.uc-case-study-content {
+	display: grid;
+	grid-template-rows: none;
+	align-content: start;
+	gap: 5px;
+	padding: 23px 24px 27px;
+	flex: 1;
+}
+.uc-case-study-title {
+	margin: 0 0 9px;
+	color: #042742;
+	font-family: "Montserrat", sans-serif;
+	font-size: calc(1.18rem + 3px);
+	font-weight: 700;
+	line-height: 1.3;
+}
+.uc-case-study--linkedin .uc-case-study-title { color: #0c74c1; }
+.uc-case-study--snapchat .uc-case-study-title { color: #f2d600; }
+.uc-case-study-item {
+	position: relative;
+	padding-left: 48px;
+}
+.uc-case-study-icon {
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: grid;
+	place-items: center;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	background: #0c74c1;
+}
+.uc-case-study-icon img {
+	display: block;
+	width: 16px;
+	height: 16px;
+	object-fit: contain;
+	filter: brightness(0) invert(1);
+}
+.uc-case-study-item h4 {
+	margin: 0 0 6px;
+	color: #042742;
+	font-family: "Montserrat", sans-serif;
+	font-size: 1rem;
+	font-weight: 700;
+	line-height: 1.25;
+}
+.uc-case-study-item p {
+	margin: 0;
+	color: #31536a;
+	font-family: "Montserrat", sans-serif;
+	font-size: calc(0.88rem + 2px);
+	font-weight: 400;
+	line-height: 1.5;
+}
+.elementor-6 .elementor-element.elementor-element-53a6fa2 { display: none !important; }
+.uc-work-actions {
+	text-align: center;
+}
+.uc-work-actions .uc-family-button {
+	margin-top: 30px;
+}
+.uc-family-landscape > .uc-work-section {
+	display: none;
+}
+.uc-work-section--dark {
+	background-color: #042742;
+	background-image: linear-gradient(rgba(4, 39, 66, 0.9), rgba(4, 39, 66, 0.9)), url("/wp-content/uploads/2020/03/DTLA5.jpg");
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.uc-work-section--dark .uc-work-copy {
+	max-width: none;
+}
+.uc-work-section--dark .uc-work-copy h2,
+.uc-work-section--dark .uc-work-copy p {
+	color: #ffffff;
+}
+.uc-work-section--dark .uc-case-study {
+	border-color: rgba(255, 255, 255, 0.18);
+	box-shadow: 0 16px 34px rgba(0, 0, 0, 0.2);
+}
+.uc-case-study--snapchat .uc-case-study-image {
+	transform: scale(1.08);
+}
+.uc-case-study--snapchat:hover .uc-case-study-image {
+	transform: scale(1.11);
+}
 @media (max-width: 1024px) and (min-width: 768px) {
 	.uc-family-inner {
 		grid-template-columns: minmax(0, 1fr) minmax(310px, 0.9fr);
 		gap: 36px;
 	}
-	.uc-family-copy p {
+	.uc-family-copy p,
+	.uc-work-copy p {
 		font-size: 1.24rem;
 		line-height: 1.58;
 	}
+	.uc-family-copy p { font-size: calc(1.24rem + 1.5px); }
+	.uc-case-study-content { padding: 22px 18px 24px; }
+	.uc-case-study-item { padding-left: 42px; }
 }
 @media (max-width: 767px) {
 	.elementor-6 .elementor-element.elementor-element-2f5e25f {
@@ -461,21 +637,24 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 		letter-spacing: 0.025em;
 		margin-top: 7px;
 	}
-	.uc-family-section {
-		padding: 36px 20px 48px;
-	}
-	.uc-family-inner {
+	.uc-family-section { padding: 36px 20px 38px; }
+	.uc-work-section { padding: 29px 20px 48px; }
+	.uc-family-inner,
+	.uc-work-inner {
 		grid-template-columns: minmax(0, 1fr);
 		gap: 32px;
 	}
-	.uc-family-copy h2 {
+	.uc-family-copy h2,
+	.uc-work-copy h2 {
 		margin-bottom: 18px;
 		font-size: clamp(2rem, 9vw, 2.8rem);
 	}
-	.uc-family-copy p {
+	.uc-family-copy p,
+	.uc-work-copy p {
 		font-size: 1.08rem;
 		line-height: 1.65;
 	}
+	.uc-family-copy p { font-size: calc(1.08rem + 1.5px); }
 	.uc-family-button {
 		min-width: 160px;
 		padding: 13px 24px;
@@ -485,6 +664,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 		justify-self: center;
 		width: min(100%, 520px);
 	}
+	.uc-case-studies { grid-template-columns: 1fr; gap: 18px; }
+	.uc-case-study-content { grid-template-rows: none; }
+	.uc-case-study-media { height: 180px; }
+	.uc-case-study-content { gap: 5px; padding: 24px 22px 26px; }
 }
 
 @media (max-width: 390px) {
@@ -878,63 +1061,93 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 						</div>
 					</div>
 				</section>
-				</div>
-				</div>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-996b48c elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="996b48c" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
-							<div class="elementor-background-overlay"></div>
-							<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-1c56b51" data-id="1c56b51" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-29d8615 elementor-widget elementor-widget-heading" data-id="29d8615" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-					<h2 class="elementor-heading-title elementor-size-default">Resources for Members</h2>				</div>
-				</div>
-				<section class="elementor-section elementor-inner-section elementor-element elementor-element-9c5bf26 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="9c5bf26" data-element_type="section">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-14e2ea2" data-id="14e2ea2" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-030a1ae elementor-widget elementor-widget-heading" data-id="030a1ae" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-					<h3 class="elementor-heading-title elementor-size-default">Build a foundation
- </h3>				</div>
-				</div>
-				<div class="elementor-element elementor-element-979bf55 elementor-widget elementor-widget-text-editor" data-id="979bf55" data-element_type="widget" data-widget_type="text-editor.default">
-				<div class="elementor-widget-container">
-									We believe in equipping our members with useful business education to encourage high-quality, professional growth. Therefore, all UConsulting members go through the Accelerator training program before delving into project work.								</div>
-				</div>
+				<section class="uc-work-section" aria-labelledby="uc-work-heading">
+					<div class="uc-work-inner">
+						<div class="uc-work-copy">
+							<h2 id="uc-work-heading">Our Work</h2>
+							<p>We partner with Fortune 500 companies and high-growth startups to solve complex business challenges across industries. Each client engagement is led by a dedicated team of 5-10 consultants, supported by our AI &amp; Data Science Committee.</p>
+						</div>
+						<div class="uc-case-studies">
+							<article class="uc-case-study uc-case-study--adidas">
+								<div class="uc-case-study-media">
+									<img class="uc-case-study-image" src="/wp-content/uploads/2026/09/adidas-case-study-photo.png" alt="Adidas storefront and logo" loading="lazy" decoding="async">
+									<span class="uc-case-study-label">Case Study 1</span>
+								</div>
+								<div class="uc-case-study-content">
+									<h3 class="uc-case-study-title">Adidas Project (Winter 2024)</h3>
+									<div class="uc-case-study-item"><span class="uc-case-study-icon"><img src="/wp-content/uploads/2026/09/case-study-objective-icon.png" alt=""></span><h4>Objective</h4><p>Strengthen Adidas Gen Z brand positioning by evaluating student perception, purchasing behavior, and opportunities to improve product and marketing strategy.</p></div>
+									<div class="uc-case-study-item"><span class="uc-case-study-icon"><img src="/wp-content/uploads/2026/09/case-study-approach-icon.png" alt=""></span><h4>Approach</h4><p>Conducted 25+ user interviews and A/B tested 45 design concepts to uncover student pain points and evaluate scalable feedback strategies.</p></div>
+									<div class="uc-case-study-item"><span class="uc-case-study-icon"><img src="/wp-content/uploads/2026/09/case-study-impact-icon.png" alt=""></span><h4>Impact</h4><p>Delivered a research-backed roadmap to strengthen <em>LinkedIn Games</em> user retention, capture real-time user insights, and improve the player experience.</p></div>
+								</div>
+							</article>
+							<article class="uc-case-study uc-case-study--linkedin">
+								<div class="uc-case-study-media">
+									<img class="uc-case-study-image" src="/wp-content/uploads/2026/09/linkedin-case-study-photo.png" alt="LinkedIn logo on an office building" loading="lazy" decoding="async">
+									<span class="uc-case-study-label">Case Study 2</span>
+								</div>
+								<div class="uc-case-study-content">
+									<h3 class="uc-case-study-title">LinkedIn Project (Summer 2025)</h3>
+									<div class="uc-case-study-item"><span class="uc-case-study-icon"><img src="/wp-content/uploads/2026/09/case-study-objective-icon.png" alt=""></span><h4>Objective</h4><p>Enhance the <em>LinkedIn Games</em> experience and uncover drivers behind first-time user dropoff.</p></div>
+									<div class="uc-case-study-item"><span class="uc-case-study-icon"><img src="/wp-content/uploads/2026/09/case-study-approach-icon.png" alt=""></span><h4>Approach</h4><p>Analyzed 3,000+ real-world shoe choices across UCLA lecture halls and gyms, supplemented by 100+ survey responses, focus groups, and competitor research.</p></div>
+									<div class="uc-case-study-item"><span class="uc-case-study-icon"><img src="/wp-content/uploads/2026/09/case-study-impact-icon.png" alt=""></span><h4>Impact</h4><p>Turned consumer research into a Gen Z strategy focused on clearer product segmentation and premium positioning, backed by 73.2% demand for versatile footwear.</p></div>
+								</div>
+							</article>
+							<article class="uc-case-study uc-case-study--snapchat">
+								<div class="uc-case-study-media">
+									<img class="uc-case-study-image" src="/wp-content/uploads/2026/09/snapchat-case-study-photo.png" alt="Snapchat billboard and logo" loading="lazy" decoding="async">
+									<span class="uc-case-study-label">Case Study 3</span>
+								</div>
+								<div class="uc-case-study-content">
+									<h3 class="uc-case-study-title">Snapchat Project (Spring 2026)</h3>
+									<div class="uc-case-study-item"><span class="uc-case-study-icon"><img src="/wp-content/uploads/2026/09/case-study-objective-icon.png" alt=""></span><h4>Objective</h4><p>Increase adoption and engagement among college-age users by understanding usage barriers, perception gaps, and opportunities for stronger campus relevance.</p></div>
+									<div class="uc-case-study-item"><span class="uc-case-study-icon"><img src="/wp-content/uploads/2026/09/case-study-approach-icon.png" alt=""></span><h4>Approach</h4><p>Collected 300+ UCLA student survey responses and conducted 20+ 1:1 interviews, supplemented by sentiment analysis, competitor research, and targeted strategy testing.</p></div>
+									<div class="uc-case-study-item"><span class="uc-case-study-icon"><img src="/wp-content/uploads/2026/09/case-study-impact-icon.png" alt=""></span><h4>Impact</h4><p>Found 80% interest in local rewards and 86% preference for group coordination, shaping strategies around campus ambassadors, Group Story, and Spotlight.</p></div>
+								</div>
+							</article>
+						</div>
+						<div class="uc-work-actions"><a class="uc-family-button" href="/work-with-us/">Explore Our Services</a></div>
 					</div>
-		</div>
-				<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-c4d87d5" data-id="c4d87d5" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-f84d479 elementor-widget elementor-widget-heading" data-id="f84d479" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-					<h3 class="elementor-heading-title elementor-size-default">Establish a network
- </h3>				</div>
+				</section>
 				</div>
-				<div class="elementor-element elementor-element-bd0bc70 elementor-widget elementor-widget-text-editor" data-id="bd0bc70" data-element_type="widget" data-widget_type="text-editor.default">
-				<div class="elementor-widget-container">
-									Along with exclusive tours and networking sessions with top consulting firms, notable UConsulting alumni, recruiters, and guest speakers, we also pride ourselves in our internal, undergraduate community.								</div>
 				</div>
+				<section class="uc-work-section uc-work-section--dark" aria-labelledby="uc-work-heading-dark">
+					<div class="uc-work-inner">
+						<div class="uc-work-copy">
+							<h2 id="uc-work-heading-dark">Our Work</h2>
+							<p>We partner with leading companies — including Boeing, Dow Jones, Expedia, J&amp;J, and more — and high-growth startups to solve complex business challenges. Each engagement is led by a <strong>dedicated team of</strong> <strong>5–10 consultants</strong>, supported by our <strong>AI &amp; DS Committee</strong> for deeper technical work. Combining these capabilities with direct access to UCLA’s undergraduate network, we turn open-ended questions into actionable insights grounded in primary research. The projects highlighted here showcase the breadth of work we take on across industries.</p>
+						</div>
+						<div class="uc-case-studies">
+							<article class="uc-case-study uc-case-study--adidas">
+								<div class="uc-case-study-media"><img class="uc-case-study-image" src="/wp-content/uploads/2026/09/adidas-case-study-photo.png" alt="Adidas storefront and logo" loading="lazy" decoding="async"><span class="uc-case-study-label">Case Study 1</span></div>
+								<div class="uc-case-study-content">
+									<h3 class="uc-case-study-title">Adidas Project (Winter 2024)</h3>
+									<div class="uc-case-study-item"><span class="uc-case-study-icon"><img src="/wp-content/uploads/2026/09/case-study-objective-icon.png" alt=""></span><h4>Objective</h4><p>Strengthen Adidas Gen Z brand positioning by evaluating student perception, purchasing behavior, and opportunities to improve product and marketing strategy.</p></div>
+									<div class="uc-case-study-item"><span class="uc-case-study-icon"><img src="/wp-content/uploads/2026/09/case-study-approach-icon.png" alt=""></span><h4>Approach</h4><p>Conducted 25+ user interviews and A/B tested 45 design concepts to uncover student pain points and evaluate scalable feedback strategies.</p></div>
+									<div class="uc-case-study-item"><span class="uc-case-study-icon"><img src="/wp-content/uploads/2026/09/case-study-impact-icon-v2.png" alt=""></span><h4>Impact</h4><p>Delivered a research-backed roadmap to strengthen <em>LinkedIn Games</em> user retention, capture real-time user insights, and improve the player experience.</p></div>
+								</div>
+							</article>
+							<article class="uc-case-study uc-case-study--linkedin">
+								<div class="uc-case-study-media"><img class="uc-case-study-image" src="/wp-content/uploads/2026/09/linkedin-case-study-photo-v2.png" alt="LinkedIn logo on an office building" loading="lazy" decoding="async"><span class="uc-case-study-label">Case Study 2</span></div>
+								<div class="uc-case-study-content">
+									<h3 class="uc-case-study-title">LinkedIn Project (Summer 2025)</h3>
+									<div class="uc-case-study-item"><span class="uc-case-study-icon"><img src="/wp-content/uploads/2026/09/case-study-objective-icon.png" alt=""></span><h4>Objective</h4><p>Enhance the <em>LinkedIn Games</em> experience and uncover drivers behind first-time user dropoff.</p></div>
+									<div class="uc-case-study-item"><span class="uc-case-study-icon"><img src="/wp-content/uploads/2026/09/case-study-approach-icon.png" alt=""></span><h4>Approach</h4><p>Analyzed 3,000+ real-world shoe choices across UCLA lecture halls and gyms, supplemented by 100+ survey responses, focus groups, and competitor research.</p></div>
+									<div class="uc-case-study-item"><span class="uc-case-study-icon"><img src="/wp-content/uploads/2026/09/case-study-impact-icon-v2.png" alt=""></span><h4>Impact</h4><p>Turned consumer research into a Gen Z strategy focused on clearer product segmentation and premium positioning, backed by 73.2% demand for versatile footwear.</p></div>
+								</div>
+							</article>
+							<article class="uc-case-study uc-case-study--snapchat">
+								<div class="uc-case-study-media"><img class="uc-case-study-image" src="/wp-content/uploads/2026/09/snapchat-case-study-photo.png" alt="Snapchat billboard and logo" loading="lazy" decoding="async"><span class="uc-case-study-label">Case Study 3</span></div>
+								<div class="uc-case-study-content">
+									<h3 class="uc-case-study-title">Snapchat Project (Spring 2026)</h3>
+									<div class="uc-case-study-item"><span class="uc-case-study-icon"><img src="/wp-content/uploads/2026/09/case-study-objective-icon.png" alt=""></span><h4>Objective</h4><p>Increase adoption and engagement among college-age users by understanding usage barriers, perception gaps, and opportunities for stronger campus relevance.</p></div>
+									<div class="uc-case-study-item"><span class="uc-case-study-icon"><img src="/wp-content/uploads/2026/09/case-study-approach-icon.png" alt=""></span><h4>Approach</h4><p>Collected 300+ UCLA student survey responses and conducted 20+ 1:1 interviews, supplemented by sentiment analysis, competitor research, and targeted strategy testing.</p></div>
+									<div class="uc-case-study-item"><span class="uc-case-study-icon"><img src="/wp-content/uploads/2026/09/case-study-impact-icon-v2.png" alt=""></span><h4>Impact</h4><p>Found 80% interest in local rewards and 86% preference for group coordination, shaping strategies around campus ambassadors, Group Story, and Spotlight.</p></div>
+								</div>
+							</article>
+						</div>
+						<div class="uc-work-actions"><a class="uc-family-button" href="/work-with-us/">Work With Us</a></div>
 					</div>
-		</div>
-				<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-f533f7e" data-id="f533f7e" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-2ff16eb elementor-widget elementor-widget-heading" data-id="2ff16eb" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-					<h3 class="elementor-heading-title elementor-size-default">Learn through experience</h3>				</div>
-				</div>
-				<div class="elementor-element elementor-element-fd1ea44 elementor-widget elementor-widget-text-editor" data-id="fd1ea44" data-element_type="widget" data-widget_type="text-editor.default">
-				<div class="elementor-widget-container">
-									UConsulting offers its members the opportunity to work on projects for our various corporate and non-profit clients. We encourage direct involvement in approaching exposure to real business objectives for our members to hone their analytical skills.								</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</section>
-					</div>
-		</div>
-					</div>
-		</section>
+				</section>
 				<section class="elementor-section elementor-top-section elementor-element elementor-element-53a6fa2 elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="53a6fa2" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
 							<div class="elementor-background-overlay"></div>
 							<div class="elementor-container elementor-column-gap-default">
