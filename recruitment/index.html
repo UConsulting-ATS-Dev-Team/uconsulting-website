@@ -281,6 +281,16 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 }
 .elementor-20,
 .elementor-20 * { font-family: "Montserrat", sans-serif !important; }
+.elementor-20 .elementor-element.elementor-element-ac40db9:not(.elementor-motion-effects-element-type-background) {
+	background-color: #042742 !important;
+	background-image:none !important;
+	background-position: center, center 43% !important;
+	background-repeat: no-repeat !important;
+	background-size: auto, cover !important;
+}
+.uc-join-header-image { position:absolute; inset:0; z-index:0; width:100% !important; height:100% !important; object-fit:cover; object-position:center 43%; }
+.elementor-20 .elementor-element.elementor-element-ac40db9 > .elementor-background-overlay { z-index:1; background:#042742 !important; opacity:.72 !important; }
+.elementor-20 .elementor-element.elementor-element-ac40db9 > .elementor-container { position:relative; z-index:2; }
 .uc-recruitment-refresh,
 .uc-recruitment-refresh * { box-sizing: border-box; }
 .uc-recruitment-refresh {
@@ -292,6 +302,13 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 	color: #042742;
 	font-family: "Montserrat", sans-serif;
 	padding: clamp(56px, 7vw, 96px) max(5%, 24px);
+}
+@media (max-width: 767px) {
+	.elementor-20 .elementor-element.elementor-element-ac40db9:not(.elementor-motion-effects-element-type-background) {
+		background-position: center, center center !important;
+		background-size: auto, contain !important;
+	}
+	.uc-join-header-image { object-fit:contain; object-position:center; }
 }
 .uc-recruitment-shell { width: min(1180px, 100%); margin: 0 auto; }
 .uc-recruitment-eyebrow {
@@ -487,6 +504,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <body data-rsssl=1 class="wp-singular page-template page-template-elementor_canvas page page-id-20 wp-custom-logo wp-embed-responsive wp-theme-oceanwp ehf-template-oceanwp ehf-stylesheet-oceanwp oceanwp-theme dropdown-mobile no-header-border default-breakpoint content-full-width content-max-width elementor-default elementor-template-canvas elementor-kit-22 elementor-page elementor-page-20">
 			<div data-elementor-type="wp-page" data-elementor-id="20" class="elementor elementor-20">
 						<section class="elementor-section elementor-top-section elementor-element elementor-element-ac40db9 elementor-section-stretched elementor-section-height-min-height elementor-section-items-top elementor-section-full_width elementor-section-content-top elementor-section-height-default" data-id="ac40db9" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
+							<img class="uc-join-header-image" src="/wp-content/uploads/2026/09/join-us-header-group.jpg?v=20260924b" alt="UConsulting members together" />
 							<div class="elementor-background-overlay"></div>
 							<div class="elementor-container elementor-column-gap-default">
 					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-d6955cf" data-id="d6955cf" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
@@ -501,7 +519,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 													<a data-elementor-open-lightbox=""  class='elementor-clickable' href="/">
 							<div class="hfe-site-logo-set">           
 				<div class="hfe-site-logo-container">
-									<img decoding="async" loading="lazy" class="hfe-site-logo-img elementor-animation-"  src="/wp-content/uploads/2020/03/wpnavlogoinverse.svg" alt="wpnavlogoinverse"/>
+									<img decoding="async" loading="lazy" class="hfe-site-logo-img elementor-animation-"  src="/wp-content/uploads/2020/03/wpnavlogoinverse.svg" alt="wpnavlogoinverse"/><span class="uc-homepage-label" style="display:block;margin-top:3px;color:white;font-family:Montserrat,sans-serif;font-size:9px;font-weight:700;letter-spacing:.16em;line-height:1;text-align:center;">HOMEPAGE</span>
 				</div>
 			</div>
 							</a>
@@ -524,7 +542,6 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 					<ul id="menu-1-9787570" class="hfe-nav-menu"><li id="menu-item-members" class="menu-item menu-item-type-post_type menu-item-object-page parent hfe-creative-menu"><a href="/team/" class = "hfe-menu-item">Members</a></li>
 <li id="menu-item-careers" class="menu-item menu-item-type-post_type menu-item-object-page parent hfe-creative-menu"><a href="/careers/" class = "hfe-menu-item">Careers</a></li>
 <li id="menu-item-29" class="menu-item menu-item-type-post_type menu-item-object-page parent hfe-creative-menu"><a href="/work-with-us/" class = "hfe-menu-item">Work With Us</a></li>
-<li id="menu-item-30" class="menu-item menu-item-type-post_type menu-item-object-page parent hfe-creative-menu"><a href="/accelerator/" class = "hfe-menu-item">Accelerator</a></li>
 <li id="menu-item-3623" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-20 current_page_item parent hfe-creative-menu"><a href="/recruitment/" class = "hfe-menu-item">Join Us</a></li>
 <li id="menu-item-1012" class="menu-item menu-item-type-post_type menu-item-object-page parent hfe-creative-menu"><a href="/faq/" class = "hfe-menu-item">FAQ</a></li>
 <li id="menu-item-28" class="menu-item menu-item-type-post_type menu-item-object-page parent hfe-creative-menu"><a href="/contact/" class = "hfe-menu-item">Contact</a></li>
@@ -1230,15 +1247,15 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 							<p class="uc-recruitment-lead">Move horizontally through each step. Event details marked TBD will be added as they are finalized.</p>
 							<div class="uc-recruitment-timeline" aria-label="Fall 2026 recruitment timeline">
 								<article class="uc-recruitment-step" data-step="1"><time>9/26</time><h3>Applications Open</h3><p>Begin your Fall 2026 application.</p></article>
-								<article class="uc-recruitment-step" data-step="2"><time>9/23 - 10/1</time><h3>Get to Know UC</h3><p>Meet members and learn more about our work, culture, and community.</p></article>
+								<article class="uc-recruitment-step" data-step="2"><time>9/25 - 10/1</time><h3>Get to Know UC</h3><p>Meet members and learn more about our work, culture, and community.</p><span class="uc-tbd">Dress: Casual</span></article>
 								<article class="uc-recruitment-step" data-step="3"><time>Date TBD</time><h3>Office Hours <small>(Optional)</small></h3><p>Join our recruitment team for a casual Zoom drop-in. No appointment is needed; ask questions whenever convenient during the scheduled window.</p><span class="uc-tbd">Dress: Casual</span></article>
-								<article class="uc-recruitment-step" data-step="4"><time>9/27, 6-7PM</time><h3>Info Session</h3><p>Tennis Clubhouse</p></article>
-								<article class="uc-recruitment-step" data-step="5"><time>9/29, 5:30-6:30PM</time><h3>Women's Night</h3><p>Location TBD</p></article>
-								<article class="uc-recruitment-step" data-step="6"><time>10/1, 6-7PM</time><h3>Case Workshop</h3><p>Tennis Clubhouse</p></article>
+								<article class="uc-recruitment-step" data-step="4"><time>9/27, 6-7PM</time><h3>Info Session</h3><p>Tennis Clubhouse</p><span class="uc-tbd">Dress: Business Casual</span></article>
+								<article class="uc-recruitment-step" data-step="5"><time>9/29, 5:30-6:30PM</time><h3>Women's Night</h3><p>Location TBD</p><span class="uc-tbd">Dress: Business Casual</span></article>
+								<article class="uc-recruitment-step" data-step="6"><time>10/1, 6-7PM</time><h3>Case Workshop</h3><p>Tennis Clubhouse</p><span class="uc-tbd">Dress: Business Casual</span></article>
 								<article class="uc-recruitment-step" data-step="7"><time>10/1, 11:59PM</time><h3>Application Deadline</h3><p>Submit all application materials through the link provided in ATS.</p></article>
-								<article class="uc-recruitment-step" data-step="8"><time>10/4</time><h3>Coffee Chats</h3><p>Selected applicants connect with UConsulting members.</p></article>
-								<article class="uc-recruitment-step" data-step="9"><time>10/6</time><h3>First Round</h3><p>First-round interviews begin.</p></article>
-								<article class="uc-recruitment-step" data-step="10"><time>10/9</time><h3>Final Round</h3><p>Final-round interviews with UConsulting leadership.</p></article>
+								<article class="uc-recruitment-step" data-step="8"><time>10/4</time><h3>Coffee Chats</h3><p>Selected applicants connect with UConsulting members.</p><span class="uc-tbd">Invite Only · Dress: Business Casual</span></article>
+								<article class="uc-recruitment-step" data-step="9"><time>10/6</time><h3>First Round</h3><p>First-round interviews begin.</p><span class="uc-tbd">Invite Only · Dress: Business Professional</span></article>
+								<article class="uc-recruitment-step" data-step="10"><time>10/9</time><h3>Final Round</h3><p>Final-round interviews with UConsulting leadership.</p><span class="uc-tbd">Invite Only · Dress: Business Professional</span></article>
 							</div>
 						</div>
 
