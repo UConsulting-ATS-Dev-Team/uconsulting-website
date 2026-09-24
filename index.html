@@ -482,6 +482,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	padding-bottom: clamp(36px, 4vw, 56px);
 }
 .uc-work-section--dark .uc-work-copy {
 	max-width: none;
@@ -494,6 +495,161 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 	border-color: rgba(255, 255, 255, 0.18);
 	box-shadow: 0 16px 34px rgba(0, 0, 0, 0.2);
 }
+.elementor-6 .elementor-element.elementor-element-c761586:not(.elementor-motion-effects-element-type-background) {
+	background-color: #042742 !important;
+	background-image: linear-gradient(rgba(4, 39, 66, 0.9), rgba(4, 39, 66, 0.9)), url("/wp-content/uploads/2020/03/DTLA5.jpg") !important;
+	background-attachment: fixed !important;
+	background-position: center center !important;
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+}
+.elementor-6 .elementor-element.elementor-element-c761586 > .elementor-background-overlay {
+	display: none !important;
+}
+.uc-places-section {
+	position: relative;
+	isolation: isolate;
+	overflow: hidden;
+	box-sizing: border-box;
+	background-color: #ffffff;
+	background-image: url("/wp-content/uploads/2020/03/DTLA5.jpg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: clamp(58px, 7vw, 96px) max(5%, 24px);
+}
+.uc-places-section::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+	background: rgba(255, 255, 255, 0.9);
+}
+@media (min-width: 1025px) {
+	.uc-places-section { background-attachment: fixed; }
+}
+.elementor-6 .elementor-element.elementor-element-c761586 #testimonialsldr .sa_hover_container {
+	padding-top: 3% !important;
+	padding-bottom: 3% !important;
+}
+.uc-places-inner {
+	display: grid;
+	grid-template-columns: minmax(0, 1.28fr) minmax(360px, 0.72fr);
+	align-items: center;
+	gap: clamp(48px, 7vw, 104px);
+	width: min(1180px, 100%);
+	margin: 0 auto;
+}
+.uc-places-showcase {
+	min-width: 0;
+	padding: clamp(28px, 3.5vw, 42px);
+	border: 1px solid rgba(12, 116, 193, 0.14);
+	border-radius: 18px;
+	background: rgba(242, 248, 252, 0.82);
+	box-shadow: 0 20px 45px rgba(4, 39, 66, 0.1);
+	backdrop-filter: blur(4px);
+}
+.uc-places-eyebrow {
+	margin: 0 0 26px;
+	color: #0c74c1;
+	font-family: "Montserrat", sans-serif;
+	font-size: calc(0.8rem + 1.5pt);
+	font-weight: 800;
+	letter-spacing: 0.24em;
+	line-height: 1.4;
+	text-align: center;
+	text-transform: uppercase;
+}
+.uc-places-logos {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	align-items: center;
+	gap: 22px 26px;
+}
+.uc-places-logo {
+	display: grid;
+	place-items: center;
+	height: 66px;
+	padding: 5px;
+}
+.uc-places-logo img {
+	display: block;
+	width: 120px;
+	height: 46px !important;
+	max-width: 100%;
+	object-fit: contain !important;
+	mix-blend-mode: multiply;
+}
+.uc-places-logo--blackstone img {
+	background: #000000;
+	object-fit: cover !important;
+	object-position: center 88%;
+	mix-blend-mode: normal;
+}
+.uc-places-logo--bain img { transform: scale(1.42); }
+.uc-places-logo--goldman img { transform: scale(1.12); }
+.uc-places-logo--tesla img { transform: scale(1.6); }
+.uc-places-logo--blackrock img { transform: scale(3.15); }
+.uc-places-more { margin: 24px 0 0; }
+.uc-places-stats {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	margin-top: 30px;
+	padding-top: 25px;
+	border-top: 1px solid rgba(12, 116, 193, 0.22);
+}
+.uc-places-stat {
+	padding: 0 18px;
+	text-align: center;
+}
+.uc-places-stat:not(:last-child) {
+	border-right: 1px solid rgba(12, 116, 193, 0.22);
+}
+.uc-places-stat strong {
+	display: block;
+	color: #0c74c1;
+	font-family: "Montserrat Alternates", "Montserrat", sans-serif;
+	font-size: clamp(1.8rem, 2.7vw, 2.6rem);
+	font-weight: 800;
+	letter-spacing: -0.04em;
+	line-height: 1;
+}
+.uc-places-stat span {
+	display: block;
+	margin-top: 8px;
+	color: #31536a;
+	font-family: "Montserrat", sans-serif;
+	font-size: 0.76rem;
+	font-weight: 700;
+	letter-spacing: 0.055em;
+	line-height: 1.35;
+	text-transform: uppercase;
+}
+.uc-places-copy {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	color: #042742;
+	text-align: left;
+}
+.uc-places-copy h2 {
+	margin: 0 0 28px;
+	color: #042742;
+	font-family: "Montserrat", sans-serif;
+	font-size: clamp(2.5rem, 4.4vw, 4.7rem);
+	font-weight: 700;
+	letter-spacing: -0.035em;
+	line-height: 1.05;
+}
+.uc-places-copy p {
+	margin: 0 0 22px;
+	color: #042742;
+	font-family: "Montserrat", sans-serif;
+	font-size: clamp(calc(1.31rem + 1.5px), calc(2.05vw + 1.5px), calc(1.6rem + 1.5px));
+	font-weight: 400;
+	line-height: 1.55;
+}
+.uc-places-copy .uc-family-button { margin-top: 10px; }
 .uc-case-study--snapchat .uc-case-study-image {
 	transform: scale(1.08);
 }
@@ -513,13 +669,27 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 	.uc-family-copy p { font-size: calc(1.24rem + 1.5px); }
 	.uc-case-study-content { padding: 22px 18px 24px; }
 	.uc-case-study-item { padding-left: 42px; }
+	.uc-places-inner {
+		grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+		gap: 36px;
+	}
+	.uc-places-copy p { font-size: calc(1.24rem + 1.5px); }
+	.uc-places-logos { gap: 16px; }
+	.uc-places-logo { height: 58px; }
+	.uc-places-stat { padding: 0 10px; }
 }
 @media (max-width: 767px) {
-	.elementor-6 .elementor-element.elementor-element-2f5e25f {
+	.homepage-skyline-flow {
+		background-attachment: fixed !important;
+		background-position: center bottom !important;
+		background-size: auto 105svh !important;
+	}
+	.homepage-skyline-flow .elementor-element.elementor-element-2f5e25f:not(.elementor-motion-effects-element-type-background) {
 		height: calc(100svh - 104px) !important;
 		min-height: 430px !important;
 		max-height: 590px !important;
-		background-position: 58% center !important;
+		background-color: transparent !important;
+		background-image: none !important;
 	}
 	.elementor-6 .elementor-element.elementor-element-2f5e25f > .elementor-container,
 	.elementor-6 .elementor-element.elementor-element-2f5e25f > .elementor-container > .elementor-column,
@@ -602,7 +772,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 		justify-content: center;
 		padding: 0 16px !important;
 		border-radius: 3px !important;
-		font-size: 0.82rem !important;
+		font-size: 1.05rem !important;
 		line-height: 1 !important;
 		white-space: nowrap;
 	}
@@ -645,16 +815,19 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 		gap: 32px;
 	}
 	.uc-family-copy h2,
-	.uc-work-copy h2 {
+	.uc-work-copy h2,
+	.uc-places-copy h2 {
 		margin-bottom: 18px;
 		font-size: clamp(2rem, 9vw, 2.8rem);
 	}
 	.uc-family-copy p,
-	.uc-work-copy p {
+	.uc-work-copy p,
+	.uc-places-copy p {
 		font-size: 1.08rem;
 		line-height: 1.65;
 	}
 	.uc-family-copy p { font-size: calc(1.08rem + 1.5px); }
+	.uc-places-copy p { font-size: calc(1.08rem + 1.5px); }
 	.uc-family-button {
 		min-width: 160px;
 		padding: 13px 24px;
@@ -668,6 +841,18 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 	.uc-case-study-content { grid-template-rows: none; }
 	.uc-case-study-media { height: 180px; }
 	.uc-case-study-content { gap: 5px; padding: 24px 22px 26px; }
+	.uc-places-section { padding: 48px 20px 54px; }
+	.uc-places-inner { grid-template-columns: 1fr; gap: 34px; }
+	.uc-places-showcase { order: 2; padding: 26px 16px; }
+	.uc-places-copy { order: 1; }
+	.uc-places-logos { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 15px 12px; }
+	.uc-places-logo { height: 52px; }
+	.uc-places-stats { margin-top: 24px; padding-top: 20px; }
+	.uc-places-stat { padding: 0 7px; }
+	.uc-places-stat strong { font-size: clamp(1.55rem, 7vw, 2.1rem); }
+	.uc-places-stat span { font-size: 0.62rem; letter-spacing: 0.035em; }
+	.uc-places-eyebrow { margin-bottom: 22px; font-size: calc(0.68rem + 1.5pt); letter-spacing: 0.18em; }
+	.uc-places-more { margin-top: 20px; margin-bottom: 0; }
 }
 
 @media (max-width: 390px) {
@@ -1354,6 +1539,38 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 		</div>
 					</div>
 		</section>
+				<section class="uc-places-section" aria-labelledby="uc-places-heading">
+					<div class="uc-places-inner">
+						<div class="uc-places-showcase">
+							<p class="uc-places-eyebrow">In the last two classes, we’ve placed members at</p>
+							<div class="uc-places-logos" aria-label="Selected employers">
+								<div class="uc-places-logo"><img src="/wp-content/uploads/2021/08/McKinsey.svg" alt="McKinsey &amp; Company" loading="lazy" decoding="async"></div>
+								<div class="uc-places-logo uc-places-logo--bain"><img src="/wp-content/uploads/2026/09/bain-transparent.png" alt="Bain &amp; Company" loading="lazy" decoding="async"></div>
+								<div class="uc-places-logo uc-places-logo--blackstone"><img src="/wp-content/uploads/2026/09/blackstone-transparent.png" alt="Blackstone" loading="lazy" decoding="async"></div>
+								<div class="uc-places-logo"><img src="/wp-content/uploads/2026/09/kkr-transparent.png" alt="KKR" loading="lazy" decoding="async"></div>
+								<div class="uc-places-logo uc-places-logo--goldman"><img src="/wp-content/uploads/2026/09/goldman-sachs-transparent.png" alt="Goldman Sachs" loading="lazy" decoding="async"></div>
+								<div class="uc-places-logo"><img src="/wp-content/uploads/2026/09/jpmorgan-transparent.png" alt="J.P. Morgan" loading="lazy" decoding="async"></div>
+								<div class="uc-places-logo"><img src="/wp-content/uploads/2020/04/Microsoft.svg" alt="Microsoft" loading="lazy" decoding="async"></div>
+								<div class="uc-places-logo uc-places-logo--tesla"><img src="/wp-content/uploads/2026/09/tesla-transparent.png" alt="Tesla" loading="lazy" decoding="async"></div>
+								<div class="uc-places-logo uc-places-logo--blackrock"><img src="/wp-content/uploads/2026/09/blackrock-transparent.png" alt="BlackRock" loading="lazy" decoding="async"></div>
+								<div class="uc-places-logo"><img src="/wp-content/uploads/2020/04/Visa.svg" alt="Visa" loading="lazy" decoding="async"></div>
+								<div class="uc-places-logo"><img src="/wp-content/uploads/2021/03/Amazon.svg" alt="Amazon" loading="lazy" decoding="async"></div>
+								<div class="uc-places-logo"><img src="/wp-content/uploads/2026/09/tiktok-transparent.png" alt="TikTok" loading="lazy" decoding="async"></div>
+							</div>
+							<p class="uc-places-eyebrow uc-places-more">And more!</p>
+							<div class="uc-places-stats" aria-label="Recent recruiting outcomes">
+								<div class="uc-places-stat"><strong>15+</strong><span>Cities represented</span></div>
+								<div class="uc-places-stat"><strong>5+</strong><span>Career sectors represented</span></div>
+								<div class="uc-places-stat"><strong>200+</strong><span>Companies represented by alumni</span></div>
+							</div>
+						</div>
+						<div class="uc-places-copy">
+							<h2 id="uc-places-heading"><span class="uc-family-accent">U</span>C Takes You Places</h2>
+							<p>Our signature six-week <strong>Accelerator Program</strong>, in-house Consulting Workshop, and dedicated recruiting support prepare members to excel at top firms across consulting, finance, technology, and beyond.</p>
+							<a class="uc-family-button" href="/careers/">Explore Careers</a>
+						</div>
+					</div>
+				</section>
 				<section class="elementor-section elementor-top-section elementor-element elementor-element-47a8efd elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="47a8efd" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
 						<div class="elementor-container elementor-column-gap-default">
 					<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-c5aba66" data-id="c5aba66" data-element_type="column">
