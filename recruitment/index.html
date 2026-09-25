@@ -310,9 +310,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 @media (max-width: 767px) {
 	.elementor-20 .elementor-element.elementor-element-ac40db9:not(.elementor-motion-effects-element-type-background) {
 		background-position: center, center center !important;
-		background-size: auto, contain !important;
+		background-size: auto, cover !important;
 	}
-	.uc-join-header-image { object-fit:contain; object-position:center; }
+	/* Fill the mobile hero edge to edge, with a subtle crop to keep the group prominent. */
+	.uc-join-header-image { object-fit:cover; object-position:center 50%; transform:scale(1.05); }
 }
 .uc-recruitment-shell { width: min(1180px, 100%); margin: 0 auto; }
 .uc-recruitment-eyebrow {
