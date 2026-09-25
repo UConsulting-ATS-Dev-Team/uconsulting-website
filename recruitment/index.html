@@ -240,7 +240,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 	overflow: hidden;
 	background: linear-gradient(rgba(4,39,66,.68), rgba(4,39,66,.68)), url("/wp-content/uploads/2026/09/careers-join-header-2026.png") center 43% / cover no-repeat !important;
 }
-.elementor-20 .elementor-element.elementor-element-ac40db9 > .elementor-background-overlay { display: none !important; }
+.elementor-20 .elementor-element.elementor-element-ac40db9 > .elementor-background-overlay { display: block !important; }
 .elementor-20 .elementor-element.elementor-element-ac40db9 > .elementor-container,
 .elementor-20 .elementor-element.elementor-element-ac40db9 > .elementor-container > .elementor-column > .elementor-widget-wrap { position: relative; }
 .elementor-20 .elementor-element.elementor-element-7a21e8a {
@@ -289,6 +289,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 	background-size: auto, cover !important;
 }
 .uc-join-header-image { position:absolute; inset:0; z-index:0; width:100% !important; height:100% !important; object-fit:cover; object-position:center 43%; }
+@media (min-width: 768px) {
+	/* Keep the group centered in the wide desktop crop. */
+	.uc-join-header-image { object-position: center 54%; }
+}
 .elementor-20 .elementor-element.elementor-element-ac40db9 > .elementor-background-overlay { z-index:1; background:#042742 !important; opacity:.72 !important; }
 .elementor-20 .elementor-element.elementor-element-ac40db9 > .elementor-container { position:relative; z-index:2; }
 .uc-recruitment-refresh,
@@ -500,11 +504,13 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 	.uc-recruitment-step { flex-basis: 86vw; }
 }
 </style>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" /></head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<style>
+</style></head>
 <body data-rsssl=1 class="wp-singular page-template page-template-elementor_canvas page page-id-20 wp-custom-logo wp-embed-responsive wp-theme-oceanwp ehf-template-oceanwp ehf-stylesheet-oceanwp oceanwp-theme dropdown-mobile no-header-border default-breakpoint content-full-width content-max-width elementor-default elementor-template-canvas elementor-kit-22 elementor-page elementor-page-20">
 			<div data-elementor-type="wp-page" data-elementor-id="20" class="elementor elementor-20">
 						<section class="elementor-section elementor-top-section elementor-element elementor-element-ac40db9 elementor-section-stretched elementor-section-height-min-height elementor-section-items-top elementor-section-full_width elementor-section-content-top elementor-section-height-default" data-id="ac40db9" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
-							<img class="uc-join-header-image" src="/wp-content/uploads/2026/09/join-us-header-group.jpg?v=20260924b" alt="UConsulting members together" />
+							<img class="uc-join-header-image" src="/wp-content/uploads/2026/09/join-us-hero-v2.jpg" alt="UConsulting members together" />
 							<div class="elementor-background-overlay"></div>
 							<div class="elementor-container elementor-column-gap-default">
 					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-d6955cf" data-id="d6955cf" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
@@ -519,7 +525,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 													<a data-elementor-open-lightbox=""  class='elementor-clickable' href="/">
 							<div class="hfe-site-logo-set">           
 				<div class="hfe-site-logo-container">
-									<img decoding="async" loading="lazy" class="hfe-site-logo-img elementor-animation-"  src="/wp-content/uploads/2020/03/wpnavlogoinverse.svg" alt="wpnavlogoinverse"/><span class="uc-homepage-label" style="display:block;margin-top:3px;color:white;font-family:Montserrat,sans-serif;font-size:9px;font-weight:700;letter-spacing:.16em;line-height:1;text-align:center;">HOMEPAGE</span>
+									<img decoding="async" loading="lazy" class="hfe-site-logo-img elementor-animation-"  src="/wp-content/uploads/2020/03/wpnavlogoinverse.svg" alt="wpnavlogoinverse"/>
 				</div>
 			</div>
 							</a>
