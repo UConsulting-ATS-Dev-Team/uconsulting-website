@@ -385,7 +385,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 .uc-recruitment-button:focus { background: #ffffff; color: #0c74c1 !important; }
 .uc-recruitment-timeline-wrap { margin-top: clamp(62px, 8vw, 98px); }
 .uc-recruitment-video {
-	width: min(900px, 100%);
+	width: min(800px, 100%);
 	margin: clamp(54px, 7vw, 82px) auto 0;
 	padding: 12px;
 	border: 1px solid rgba(4,39,66,.12);
@@ -410,8 +410,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 }
 .uc-recruitment-step {
 	position: relative;
-	flex: 0 0 280px;
-	min-height: 265px;
+	flex: 0 0 360px;
+	min-height: 360px;
 	padding: 56px 24px 26px;
 	border: 1px solid rgba(4, 39, 66, 0.12);
 	border-radius: 12px;
@@ -437,6 +437,19 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 .uc-recruitment-step h3 { margin: 0 0 10px; color: #042742; font-size: 19px; font-weight: 750; line-height: 1.3; }
 .uc-recruitment-step p { margin: 0; color: #31536a; font-size: 16px; font-weight: 400; line-height: 1.55; }
 .uc-recruitment-step .uc-tbd { display: block; margin-top: 10px; color: #0c74c1; font-size: 16px; font-weight: 650; line-height: 1.55; }
+.uc-recruitment-step .uc-event-link {
+	display: inline-flex;
+	margin-top: 16px;
+	padding: 9px 14px;
+	border-radius: 5px;
+	background: #0c74c1;
+	color: #ffffff !important;
+	font-size: 14px;
+	font-weight: 750;
+	text-decoration: none;
+}
+.uc-recruitment-step .uc-event-link:hover,
+.uc-recruitment-step .uc-event-link:focus { background: #042742; }
 .uc-recruitment-photos { margin-top: clamp(60px, 8vw, 92px); }
 .uc-recruitment-photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 28px; }
 .uc-recruitment-photo-frame {
@@ -1253,16 +1266,17 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 							<h2>Recruitment timeline</h2>
 							<p class="uc-recruitment-lead">Move horizontally through each step. Event details marked TBD will be added as they are finalized.</p>
 							<div class="uc-recruitment-timeline" aria-label="Fall 2026 recruitment timeline">
-								<article class="uc-recruitment-step" data-step="1"><time>9/26</time><h3>Applications Open</h3><p>Begin your Fall 2026 application.</p></article>
-								<article class="uc-recruitment-step" data-step="2"><time>9/25 - 10/1</time><h3>Get to Know UC</h3><p>Meet members and learn more about our work, culture, and community.</p><span class="uc-tbd">Dress: Casual</span><a class="uc-recruitment-button" href="https://uconsultingats.com/meet" target="_blank" rel="nofollow">Sign up</a></article>
-								<article class="uc-recruitment-step" data-step="3"><time>Date TBD</time><h3>Office Hours <small>(Optional)</small></h3><p>Join our recruitment team for a casual Zoom drop-in. No appointment is needed; ask questions whenever convenient during the scheduled window.</p><span class="uc-tbd">Dress: Casual</span></article>
-								<article class="uc-recruitment-step" data-step="4"><time>9/27, 6-7PM</time><h3>Info Session</h3><p>Tennis Clubhouse</p><span class="uc-tbd">Dress: Business Casual</span><a class="uc-recruitment-button" href="https://luma.com/f695fizq" target="_blank" rel="nofollow">RSVP</a></article>
-								<article class="uc-recruitment-step" data-step="5"><time>9/29, 5:30-6:30PM</time><h3>Women's Night</h3><p>Kerckhoff Patio</p><span class="uc-tbd">Dress: Business Casual</span><a class="uc-recruitment-button" href="https://luma.com/r1dw26lo" target="_blank" rel="nofollow">RSVP</a></article>
-								<article class="uc-recruitment-step" data-step="6"><time>10/1, 6-7PM</time><h3>Case Workshop</h3><p>Tennis Clubhouse</p><span class="uc-tbd">Dress: Business Casual</span><a class="uc-recruitment-button" href="https://luma.com/lz2hoezf" target="_blank" rel="nofollow">RSVP</a></article>
-								<article class="uc-recruitment-step" data-step="7"><time>10/1, 11:59PM</time><h3>Application Deadline</h3><p>Submit all application materials through the link provided in ATS.</p></article>
-								<article class="uc-recruitment-step" data-step="8"><time>10/4</time><h3>Coffee Chats</h3><p>Selected applicants connect with UConsulting members.</p><span class="uc-tbd">Invite Only · Dress: Business Casual</span></article>
-								<article class="uc-recruitment-step" data-step="9"><time>10/6</time><h3>First Round</h3><p>First-round interviews begin.</p><span class="uc-tbd">Invite Only · Dress: Business Professional</span></article>
-								<article class="uc-recruitment-step" data-step="10"><time>10/9</time><h3>Final Round</h3><p>Final-round interviews with UConsulting leadership.</p><span class="uc-tbd">Invite Only · Dress: Business Professional</span></article>
+								<article class="uc-recruitment-step" data-step="1"><time>9/26</time><h3>Applications Open</h3><p>The application consists of a résumé drop, a short essay question, and a video submission.</p><a class="uc-event-link" href="https://uconsultingats.com/signup" target="_blank" rel="nofollow">Complete Here</a></article>
+								<article class="uc-recruitment-step" data-step="2"><time>9/25–10/1</time><h3>Get to Know UC</h3><p>Have a casual, half-hour conversation with one of our members.</p><span class="uc-tbd">Dress: Casual</span><a class="uc-event-link" href="https://uconsultingats.com/meet" target="_blank" rel="nofollow">Sign Up</a></article>
+								<article class="uc-recruitment-step" data-step="3"><time>9/28, 10AM–12PM<br>9/30, 1–3PM<br>10/1, 4–6PM</time><h3>Office Hours <small>(Optional)</small></h3><p>Drop in to ask our recruitment team questions about UC, the application, or the interview process.</p><span class="uc-tbd">Location: Zoom<br>Dress: Casual</span></article>
+								<article class="uc-recruitment-step" data-step="4"><time>9/27, 6–7PM</time><h3>Info Session <small>(Optional)</small></h3><p>Join us to hear our members share more about UC projects, culture, and what a career in consulting looks like.</p><span class="uc-tbd">Location: Zoom &amp; Tennis Clubhouse<br>Dress: Business Casual</span><a class="uc-event-link" href="https://luma.com/f695fizq" target="_blank" rel="nofollow">RSVP</a></article>
+								<article class="uc-recruitment-step" data-step="5"><time>9/29, 5:30–6:30PM</time><h3>Women's Night <small>(Optional)</small></h3><p>Female-identifying candidates are invited to drop by and meet our members, ask questions about recruiting, and get application advice.</p><span class="uc-tbd">Location: Kerckhoff Patio<br>Dress: Business Casual</span><a class="uc-event-link" href="https://uconsultingats.com/signup" target="_blank" rel="nofollow">RSVP</a></article>
+								<article class="uc-recruitment-step" data-step="6"><time>9/29, 7–9PM</time><h3>UBS Fall Business Showcase <small>(Optional)</small></h3><p>This is another great opportunity to network with us and meet 30+ other UCLA business clubs.</p><span class="uc-tbd">Location: La Kretz 110<br>Dress: Business Casual</span><a class="uc-event-link" href="https://forms.gle/mH1HphvyJaf529Uv6" target="_blank" rel="nofollow">RSVP</a></article>
+								<article class="uc-recruitment-step" data-step="7"><time>10/1, 6–7PM</time><h3>Case Workshop <small>(Optional)</small></h3><p>We will teach you the basics of how to approach a case study interview.</p><span class="uc-tbd">Location: Tennis Clubhouse<br>Dress: Business Casual</span><a class="uc-event-link" href="https://uconsultingats.com/signup" target="_blank" rel="nofollow">RSVP</a></article>
+								<article class="uc-recruitment-step" data-step="8"><time>10/1, 11:59PM</time><h3>Application Deadline</h3><p>Submit your résumé, short essay response, and video submission through ATS.</p></article>
+								<article class="uc-recruitment-step" data-step="9"><time>10/4</time><h3>Coffee Chats</h3><p>Coffee chats will be conducted in groups of four as you rotate meeting our members. We want to know more about your passions, experiences, and what would make you a great member of our family.</p><span class="uc-tbd">Invite Only · Dress: Business Casual</span></article>
+								<article class="uc-recruitment-step" data-step="10"><time>10/6</time><h3>First Round</h3><p>First round interviews will be conducted in groups of four in 1 hour sessions by our members. It will consist of a group case followed by a set of individual and group behavioral interview questions.</p><span class="uc-tbd">Invite Only · Dress: Business Casual</span></article>
+								<article class="uc-recruitment-step" data-step="11"><time>10/9</time><h3>Final Round</h3><p>You will be paired with a “buddy” from UC, who will help you prepare for your interview. Interviews are 45-minute, individual sessions with members of our executive board. It will consist of 15 minute behavioral and 30 minute case interview portions.</p><span class="uc-tbd">Invite Only · Dress: Business Professional</span></article>
 							</div>
 						</div>
 
